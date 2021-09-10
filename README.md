@@ -2,6 +2,12 @@
 
 Generates a polyglot JPEG with a javascript payload to bypass CSP. How it works is treating the header bytes of an image (`0xFF 0xD8 0xFF 0xE0`) as a variable name and using the comment within the JPEG to store the value for the variable. For more information about how it works please read https://portswigger.net/research/bypassing-csp-using-polyglot-jpegs.
 
+Simply put, if you see a similar CSP as shown below and you can upload JPEG images to the webserver you can bypass the CSP to exploit XSS vulnerabilities.
+
+```
+Content-Security-Policy: default-src 'self';
+```
+
 ## Installation
 
 **`xjt` requires to have ExifTool installed!**
