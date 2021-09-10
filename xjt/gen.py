@@ -12,10 +12,6 @@ HEADER_LEN = 0x2f2a
 
 def get_skeleton_image(width, height):
     skele_file = pkg_resources.resource_stream('xjt', 'data/burp.jpg')
-    # skele_io = BytesIO()
-    #
-    # with open(skele_file, "rb") as f:
-    #     skele_io.write(f.read())
 
     im = Image.open(skele_file)
 
