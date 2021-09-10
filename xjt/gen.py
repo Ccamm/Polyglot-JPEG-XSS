@@ -11,7 +11,6 @@ EXIFTOOL_CMD = "exiftool -Comment='{payload}' {image_file} -w"
 HEADER_LEN = 0x2f2a
 
 def get_skeleton_image(width, height):
-    print(__name__)
     skele_file = pkg_resources.resource_stream('xjt', 'data/burp.jpg')
     # skele_io = BytesIO()
     #
